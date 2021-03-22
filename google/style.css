@@ -58,6 +58,7 @@ a
     border-radius: 5px;
     min-width: 96px;
     cursor: pointer;
+    outline: none;
 }
 
 .menu
@@ -111,6 +112,7 @@ a
     height: 40px;
     margin: 0 auto;
     padding-top: 8px;
+
 }
 
 img.lupa
@@ -174,6 +176,8 @@ input
     height: 36px;
     min-width: 54px;
     text-align: center;
+    user-select: none;
+    outline-color: #1a73e8;
 }
 
 .przycisk1:hover,
@@ -182,6 +186,7 @@ input
     box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
     border: 1px solid #d9d9d9;
 }
+
 
 .przycisk2
 {
@@ -199,7 +204,10 @@ input
     min-width: 54px;
     text-align: center;
     cursor: pointer;
+    outline-width: 1px;
+    outline-color: #1a73e8;
 }
+
 
 .przycisk2:hover,
 .przycisk2:focus 
