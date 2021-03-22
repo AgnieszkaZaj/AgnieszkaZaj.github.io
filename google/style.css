@@ -1,0 +1,337 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+.gora_prawo
+{
+    display: grid;
+    justify-content: right;
+    margin: 10px;
+}
+
+
+.gora_elementy
+{
+    display: inline-block;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.element:hover
+{
+    text-decoration: underline;
+}
+
+a
+{
+    color: #222;
+    text-decoration: none;
+    padding-right: 15px;
+    font-family: Roboto,HelveticaNeue,Arial,sans-serif;
+    font-size: 10pt;
+}
+
+.logowanie
+{
+    display: inline-block;
+    color: #fff;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 23px;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 96px;
+    cursor: pointer;
+}
+
+.menu
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin:5px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.kropki
+{
+    max-height: 25px;
+}
+
+.srodek
+{
+    padding-bottom: 70px;
+}
+
+.logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    max-height: 100px;
+}
+.wyszukiwarka
+{
+    display: block;
+    justify-content: center;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    margin: 10px auto;
+}
+
+.wyszukiwanie
+{
+    flex: 1;
+    display: flex;
+    width: auto;
+    z-index: 3;
+    max-width: 600px;
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 25px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+img.lupa
+{
+    margin: auto;
+    height: 17px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+img.klawiatura
+{
+    margin: auto;
+    height: 13px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 10px;
+    
+}
+
+input
+{
+    font-family: arial,sans-serif;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 10px;
+    color: #222;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.przyciski
+{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.przycisk1
+{
+    display: inline-block;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+}
+
+.przycisk1:hover,
+.przycisk1:focus 
+{
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+.przycisk2
+{
+    display: inline-block;
+    background-color: #F8F9FA;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.przycisk2:hover,
+.przycisk2:focus 
+{
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+.dol
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f2f2f2;
+}
+
+.pasek1
+{
+    padding: 13px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+
+.pasek2
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.element1
+{   
+    justify-content: flex-start;
+    min-width: 30%;
+    order: 1;
+    text-align: left;
+}
+
+.element2
+{
+    order: 2;
+}
+
+.element3
+{
+    justify-content: flex-end;
+    min-width: 30%;
+    order: 3;
+    text-align: right;
+}
+
+.napis
+{  
+     color: #70757a;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    display: inline-block;
+    padding: 15px;
+    white-space: nowrap;
+}
+.napis:hover
+{
+    text-decoration: underline;
+}
+
+img.leaf
+{
+    height: 14px;
+}
+
+
+@media only screen and (max-width: 1200px)
+{
+    .pasek2
+    {
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    
+    .element1
+    {
+        order: 2;
+        text-align: center;
+        min-width: 30%;
+    }
+    .element2 
+    {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .element3
+    {
+        order: 3;
+        text-align: center;
+        min-width: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .pasek2
+    {
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .element1
+    {
+        order: 2;
+        text-align: center;
+        width: 100%;
+    }
+    .element2 
+
+    {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .element3
+    {
+        order: 3;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
