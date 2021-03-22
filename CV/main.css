@@ -1,0 +1,124 @@
+.content{
+    display:grid;
+    padding:0px;
+    grid-template-columns:400px auto;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    grid-template-areas: 
+    "dane header"
+    "dane header"
+    "dane informacje"
+    "dane informacje"
+    "dane informacje"
+    "dane informacje"
+    "dane informacje";
+}
+
+body{
+    font-size: 20px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(233, 230, 230);
+}
+
+h1{
+    font-size: 40px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    
+}
+h2{
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+p{
+    background-color: rgb(255, 255, 255);
+    border: 3px rgb(3, 3, 3);
+    margin: 5px;
+    padding: 20px;
+}
+
+.dane{
+    grid-area: dane;
+    background-color: rgb(233, 230, 230);
+    height: auto;
+    text-align: center;
+    
+}
+
+.kontakt
+{
+    font-style: oblique;
+    color:rgb(3, 3, 3)
+}
+
+.informacje
+{
+    grid-area: informacje;
+}
+
+.zdjecie
+{
+    grid-area: dane;   
+}
+img
+{
+    border-radius: 10%;
+    border-color: white;
+    border: 5px solid white;
+    max-width: 100%;
+    height: auto;
+}
+
+div{
+    margin: 5px;
+    padding: 20px;
+}
+
+.funkcja{
+
+    color:rgb(3, 3, 3)
+}
+
+h3{
+    background-color: rgb(233, 230, 230);
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color:rgb(3, 3, 3)
+}
+
+.miejsce
+{
+    font-style: oblique;
+    color:rgb(3, 3, 3)
+}
+.kierunek
+{
+    font-style: oblique;
+    color:rgb(3, 3, 3)
+}
+.nazwa{
+
+    font-style:inherit;
+    color:rgb(3, 3, 3);
+    font-weight: bold;
+    
+    
+}
+
+.czas
+{
+    font-size: 15px;
+}
+
+.tekst
+{
+    display:flex;
+    flex-direction: column;
+}
