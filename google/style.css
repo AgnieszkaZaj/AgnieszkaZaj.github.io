@@ -1,9 +1,9 @@
-body, html {
+.search body, html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
-body
+.search body
 {
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ body
     margin: 0;
 }
 
-.gora_prawo
+.search .gora_prawo
 {
     display: grid;
     justify-content: right;
@@ -23,19 +23,19 @@ body
 }
 
 
-.gora_elementy
+.search .gora_elementy
 {
     display: inline-block;
     flex-grow: 1;
     cursor: pointer;
 }
 
-.element:hover
+.search .element:hover
 {
     text-decoration: underline;
 }
 
-a
+.search a
 {
     color: #222;
     text-decoration: none;
@@ -44,7 +44,7 @@ a
     font-size: 10pt;
 }
 
-.logowanie
+.search .logowanie
 {
     display: inline-block;
     color: #fff;
@@ -61,7 +61,7 @@ a
     outline: none;
 }
 
-.menu
+.search .menu
 {
     display: inline-block;
     vertical-align: middle;
@@ -70,17 +70,17 @@ a
     cursor: pointer;
 }
 
-.kropki
+.search .kropki
 {
     max-height: 25px;
 }
 
-.srodek
+.search .srodek
 {
     padding-bottom: 70px;
 }
 
-.logo
+.search .logo
 {
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ a
     padding-bottom: 30px;
     max-height: 100px;
 }
-.wyszukiwarka
+.search .wyszukiwarka
 {
     display: block;
     justify-content: center;
@@ -97,7 +97,7 @@ a
     margin: 10px auto;
 }
 
-.wyszukiwanie
+.search .wyszukiwanie
 {
     flex: 1;
     display: flex;
@@ -115,7 +115,7 @@ a
 
 }
 
-img.lupa
+.search img.lupa
 {
     margin: auto;
     height: 17px;
@@ -125,7 +125,7 @@ img.lupa
     cursor: pointer;
 }
 
-img.klawiatura
+.search img.klawiatura
 {
     margin: auto;
     height: 13px;
@@ -135,7 +135,7 @@ img.klawiatura
     
 }
 
-input
+.search input
 {
     font-family: arial,sans-serif;
     background-color: transparent;
@@ -152,7 +152,7 @@ input
     text-align: start;
 }
 
-.przyciski
+.search .przyciski
 {
     display: block;
     text-align: center;
@@ -161,7 +161,7 @@ input
     cursor: pointer;
 }
 
-.przycisk1
+.search .przycisk1
 {
     display: inline-block;
     background-color: #f8f9fa;
@@ -180,15 +180,15 @@ input
     outline-color: #1a73e8;
 }
 
-.przycisk1:hover,
-.przycisk1:focus 
+.search .przycisk1:hover,
+.search .przycisk1:focus 
 {
     box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
     border: 1px solid #d9d9d9;
 }
 
 
-.przycisk2
+.search .przycisk2
 {
     display: inline-block;
     background-color: #F8F9FA;
@@ -209,14 +209,14 @@ input
 }
 
 
-.przycisk2:hover,
-.przycisk2:focus 
+.search .przycisk2:hover,
+.search .przycisk2:focus 
 {
     box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
     border: 1px solid #d9d9d9;
 }
 
-.dol
+.search .dol
 {
     display: flex;
     flex-direction: column;
@@ -224,7 +224,7 @@ input
     background: #f2f2f2;
 }
 
-.pasek1
+.search .pasek1
 {
     padding: 13px 30px;
     border-bottom: 1px solid #dadce0;
@@ -232,7 +232,7 @@ input
     color: rgba(0,0,0,.54);
 }
 
-.pasek2
+.search .pasek2
 {
     display: flex;
     flex-wrap: wrap;
@@ -240,7 +240,7 @@ input
     padding: 0 20px;
 }
 
-.element1
+.search .element1
 {   
     justify-content: flex-start;
     min-width: 30%;
@@ -248,12 +248,12 @@ input
     text-align: left;
 }
 
-.element2
+.search .element2
 {
     order: 2;
 }
 
-.element3
+.search .element3
 {
     justify-content: flex-end;
     min-width: 30%;
@@ -261,7 +261,7 @@ input
     text-align: right;
 }
 
-.napis
+.search .napis
 {  
      color: #70757a;
     font-size: 14px;
@@ -270,12 +270,12 @@ input
     padding: 15px;
     white-space: nowrap;
 }
-.napis:hover
+.search .napis:hover
 {
     text-decoration: underline;
 }
 
-img.leaf
+.search img.leaf
 {
     height: 14px;
 }
@@ -283,26 +283,26 @@ img.leaf
 
 @media only screen and (max-width: 1200px)
 {
-    .pasek2
+    .search .pasek2
     {
         justify-content: space-evenly;
         text-align: center;
     }
     
-    .element1
+    .search .element1
     {
         order: 2;
         text-align: center;
         min-width: 30%;
     }
-    .element2 
+    .search .element2 
     {
         order: 1;
         width: 100%;
         justify-content: center;
     }
 
-    .element3
+    .search .element3
     {
         order: 3;
         text-align: center;
@@ -312,19 +312,19 @@ img.leaf
 
 @media only screen and (max-width: 600px) 
 {
-    .pasek2
+    .search .pasek2
     {
         justify-content: space-evenly;
         text-align: center;
     }
 
-    .element1
+    .search .element1
     {
         order: 2;
         text-align: center;
         width: 100%;
     }
-    .element2 
+    .search .element2 
 
     {
         order: 1;
@@ -332,7 +332,7 @@ img.leaf
         justify-content: center;
     }
 
-    .element3
+    .search .element3
     {
         order: 3;
         text-align: center;
