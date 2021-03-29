@@ -1,0 +1,323 @@
+.results
+{
+    margin: 0;
+    margin-top: 5px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 50px 1fr;
+    font-family: arial,sans-serif;
+    
+}
+
+.results .srodek
+{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+}
+
+.results .gora
+{
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+
+.results .gora .gora_elementy
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.results .menu
+{
+    padding-right: 10px;
+    padding-top: 5px;
+    cursor: pointer;
+    order:2;
+}
+
+.results .element
+{
+    display: none;
+}
+.results .srodek .logo
+{   
+
+    height: 20px;
+    display: inline-block;
+    padding: 30px 0px 0 25px;
+}
+
+.results .srodek img.google
+{
+    width: 100px;
+    height: 33px;
+}
+
+.results .srodek .wyszukiwarka
+{
+    display: inline-block;
+}
+
+.results .opcje
+{   
+    height:10px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-bottom: 18px;
+    padding-left: 180px;
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.results .opcja
+{
+    color: #5f6368;
+    font-size: 15px;
+    padding: 9px;
+
+}
+
+.results .opcje svg
+{
+    height: 17px;
+    flex-direction: row;
+}
+
+.results .opcje svg path 
+{
+    fill: #5f6368;
+}
+
+.results .opcje .opcja
+{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.results .przyciski
+{
+    display: none;
+}
+
+.results .pasek2
+{
+    display: none;
+}
+
+.results .wyszukiwarka
+{
+
+    padding: 20px 60px 0px 60px;
+}
+
+.results .wyszukiwanie
+{
+    width: 690px;
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 14px;
+}
+
+.results .wyszukiwanie
+{
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+
+    justify-content: center;
+}
+
+.results .x
+{   padding-top: 4px;
+    padding-right: 7px;
+    height: 24px;
+    width: auto;
+    order: 2;
+}
+.results .kreska
+{
+    order: 3;
+    border-left: 1px solid #dfe1e5;
+    height: 77%;
+}
+.results img.klawiatura
+{
+    padding-left: 15px;
+    padding-right: 18px;
+    height: 13px;
+    padding-top: 10px;
+    order: 4;
+
+}
+.results .lupa 
+{
+    margin: auto;
+    height: 18px;
+    padding-bottom: 10px;
+    padding-right: 9px;
+    order: 5;
+}
+
+.results .x path
+{
+    display: inline-block;
+    fill: #5f6368;
+}
+
+.results input
+{
+    font-family: arial,sans-serif;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 10px;
+    color: #222;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.results .wyszukiwanie:hover,
+.results .wyszukiwanie:focus {
+    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+}
+
+.results .kropki
+{
+    height: 24px;
+    cursor: pointer;
+}
+
+.results .logowanie
+{
+    display: inline-block;
+    color: #fff;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 23px;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 96px;
+    cursor: pointer;
+    outline: none;
+}
+
+.results .gora
+{
+    padding-top: 25px;
+    padding-right: 20px;
+}
+
+.results .liczba_wynikow
+{
+    padding-left: 180px;
+    padding-top: 10px;
+    grid-column: 1;
+    grid-row: 3;
+    color: #70757a;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+
+.results .wyniki
+{
+    padding-left: 180px;
+    padding-top: 5px;
+    grid-column: 1;
+    grid-row: 4;
+    
+}
+
+.results .wynik
+{
+    margin-bottom: 30px;
+}
+
+
+.results .link
+{
+    font-size: 14px;
+    line-height: 1.3;
+    color: #202124;
+    text-decoration: none;
+}
+
+
+
+.results .tytul
+{
+    font-size: 20px;
+    line-height: 1.3;
+    color: #1a0dab;
+    padding: 4px 0 4px 0;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.results .opis
+{
+    line-height: 1.58;
+    color: #4d5156;
+    text-align: left;
+    font-size: 14px;
+}
+
+.results .dol
+{
+    grid-column:1/3;
+    grid-row: 5;
+    margin-top: 10px;
+    padding-left: 175px;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    border-top: 1px solid #dfe1e5;
+}
+
+.results .pasek1
+{
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+}
+
+.results .pasek3
+{
+    padding: 10px 0 20px 0;
+    display: flex;
+    font-size: 15px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.results .pasek3 .napis
+{
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+    padding-right: 20px;
+}
+
+.results a{
+    text-decoration: none;
+}
