@@ -251,6 +251,7 @@
 .results .wynik
 {
     margin-bottom: 30px;
+    cursor: pointer;
 }
 .results a.ap{
     color: #5f6368;
