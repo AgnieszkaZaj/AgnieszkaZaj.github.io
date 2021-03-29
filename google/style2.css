@@ -252,7 +252,9 @@
 {
     margin-bottom: 30px;
 }
-
+.results a.ap{
+    color: #5f6368;
+}
 
 .results .link
 {
