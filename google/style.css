@@ -197,6 +197,7 @@ input
     text-align: center;
     user-select: none;
     outline-color: #1a73e8;
+    cursor: pointer;
 }
 
 .przycisk1:hover,
