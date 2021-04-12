@@ -1,11 +1,10 @@
-.search body, html {
+body, html{
     height: 100%;
-    margin: 0;
-    padding: 0;
+    position: relative;
 }
-.search body
-{
-    display: flex;
+
+body{
+    display:flex;
     flex-direction: column;
     justify-content: space-between;
     background: #fff;
@@ -13,9 +12,30 @@
     font-family: arial,sans-serif;
     color: #222;
     margin: 0;
+
+
 }
 
-.search .gora_prawo
+.x{
+    display: none;
+}
+.pasek3{
+    display: none;
+}
+.wyniki{
+    display: none;
+}
+.opcje{
+    display: none;
+}
+.liczba_wynikow{
+    display: none;
+}
+.kreska{
+    display: none;
+}
+
+.gora_prawo
 {
     display: grid;
     justify-content: right;
@@ -23,19 +43,19 @@
 }
 
 
-.search .gora_elementy
+.gora_elementy
 {
     display: inline-block;
     flex-grow: 1;
     cursor: pointer;
 }
 
-.search .element:hover
+.element:hover
 {
     text-decoration: underline;
 }
 
-.search a
+a
 {
     color: #222;
     text-decoration: none;
@@ -44,7 +64,7 @@
     font-size: 10pt;
 }
 
-.search .logowanie
+.logowanie
 {
     display: inline-block;
     color: #fff;
@@ -61,7 +81,7 @@
     outline: none;
 }
 
-.search .menu
+.menu
 {
     display: inline-block;
     vertical-align: middle;
@@ -70,17 +90,17 @@
     cursor: pointer;
 }
 
-.search .kropki
+.kropki
 {
     max-height: 25px;
 }
 
-.search .srodek
+.srodek
 {
     padding-bottom: 70px;
 }
 
-.search .logo
+.logo
 {
     display: flex;
     flex-direction: column;
@@ -88,7 +108,7 @@
     padding-bottom: 30px;
     max-height: 100px;
 }
-.search .wyszukiwarka
+.wyszukiwarka
 {
     display: block;
     justify-content: center;
@@ -97,9 +117,9 @@
     margin: 10px auto;
 }
 
-.search .wyszukiwanie
+.wyszukiwanie
 {
-    flex: 1;
+    flex:1 ;
     display: flex;
     width: auto;
     z-index: 3;
@@ -115,7 +135,7 @@
 
 }
 
-.search img.lupa
+img.lupa
 {
     margin: auto;
     height: 17px;
@@ -125,7 +145,7 @@
     cursor: pointer;
 }
 
-.search img.klawiatura
+img.klawiatura
 {
     margin: auto;
     height: 13px;
@@ -135,7 +155,7 @@
     
 }
 
-.search input
+input
 {
     font-family: arial,sans-serif;
     background-color: transparent;
@@ -152,7 +172,7 @@
     text-align: start;
 }
 
-.search .przyciski
+.przyciski
 {
     display: block;
     text-align: center;
@@ -161,7 +181,7 @@
     cursor: pointer;
 }
 
-.search .przycisk1
+.przycisk1
 {
     display: inline-block;
     background-color: #f8f9fa;
@@ -180,15 +200,15 @@
     outline-color: #1a73e8;
 }
 
-.search .przycisk1:hover,
-.search .przycisk1:focus 
+.przycisk1:hover,
+.przycisk1:focus 
 {
     box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
     border: 1px solid #d9d9d9;
 }
 
 
-.search .przycisk2
+.przycisk2
 {
     display: inline-block;
     background-color: #F8F9FA;
@@ -209,14 +229,14 @@
 }
 
 
-.search .przycisk2:hover,
-.search .przycisk2:focus 
+.przycisk2:hover,
+.przycisk2:focus 
 {
     box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
     border: 1px solid #d9d9d9;
 }
 
-.search .dol
+.dol
 {
     display: flex;
     flex-direction: column;
@@ -224,7 +244,7 @@
     background: #f2f2f2;
 }
 
-.search .pasek1
+.pasek1
 {
     padding: 13px 30px;
     border-bottom: 1px solid #dadce0;
@@ -232,7 +252,7 @@
     color: rgba(0,0,0,.54);
 }
 
-.search .pasek2
+.pasek2
 {
     display: flex;
     flex-wrap: wrap;
@@ -240,7 +260,7 @@
     padding: 0 20px;
 }
 
-.search .element1
+.element1
 {   
     justify-content: flex-start;
     min-width: 30%;
@@ -248,12 +268,12 @@
     text-align: left;
 }
 
-.search .element2
+.element2
 {
     order: 2;
 }
 
-.search .element3
+.element3
 {
     justify-content: flex-end;
     min-width: 30%;
@@ -261,7 +281,7 @@
     text-align: right;
 }
 
-.search .napis
+.napis
 {  
      color: #70757a;
     font-size: 14px;
@@ -270,12 +290,12 @@
     padding: 15px;
     white-space: nowrap;
 }
-.search .napis:hover
+.napis:hover
 {
     text-decoration: underline;
 }
 
-.search img.leaf
+img.leaf
 {
     height: 14px;
 }
@@ -283,26 +303,26 @@
 
 @media only screen and (max-width: 1200px)
 {
-    .search .pasek2
+    .pasek2
     {
         justify-content: space-evenly;
         text-align: center;
     }
     
-    .search .element1
+    .element1
     {
         order: 2;
         text-align: center;
         min-width: 30%;
     }
-    .search .element2 
+    .element2 
     {
         order: 1;
         width: 100%;
         justify-content: center;
     }
 
-    .search .element3
+    .element3
     {
         order: 3;
         text-align: center;
@@ -312,19 +332,19 @@
 
 @media only screen and (max-width: 600px) 
 {
-    .search .pasek2
+    .pasek2
     {
         justify-content: space-evenly;
         text-align: center;
     }
 
-    .search .element1
+    .element1
     {
         order: 2;
         text-align: center;
         width: 100%;
     }
-    .search .element2 
+    .element2 
 
     {
         order: 1;
@@ -332,14 +352,13 @@
         justify-content: center;
     }
 
-    .search .element3
+    .element3
     {
         order: 3;
         text-align: center;
         width: 100%;
     }
 }
-
 
 
 
