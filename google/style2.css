@@ -253,9 +253,8 @@
     
 }
 
-.results .wynik
+.results .wyniki .wynik 
 {
-    margin-bottom: 30px;
     cursor: pointer;
 }
 .results a.ap{
