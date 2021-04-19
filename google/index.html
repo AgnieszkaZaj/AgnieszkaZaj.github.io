@@ -5,6 +5,7 @@
         <title>Google</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style2.css">
+        <script src="cities.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     </head>
     <body>
@@ -109,6 +110,13 @@
                 <a>Około 14 700 000 wyników (0,34 s)</a>
             </div>
             <div class="wyniki">
+                 <div class="lista_miast">
+                    <div class="lista">
+                        <h1>Wybrane miasta: </h1>
+                        <li v-for="city in filteredCities">
+                            {{ city.name }}
+                        </li>
+                    </div> 
                 <div class="wynik">
                     <a class="link">https://support.google.com › websearch › answer</a><br>
                     <a class="tytul">Sprawdzanie wyników wyszukiwania podróży przez Gmaila ...</a><br>
@@ -140,7 +148,17 @@
                   el: '#app',
                   data: {
                     googleSearch: '',
-                  }
+                    cities: window.cities
+                  },
+                  computed: {
+                    filteredCities: function() {
+                        let c = this.cities.filter(city => city.name.includes(this.googleSearch))
+                            if(c.length > 10){
+                                return c.slice(0,11);
+                            }
+                            return c
+                        }
+                    }
                 });
               </script>  
         </div>
