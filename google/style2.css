@@ -334,3 +334,43 @@
 .results a{
     text-decoration: none;
 }
+
+.results .top10
+{
+    display: none;
+}
+
+.results .autocompleter
+{
+    display: none;
+}
+
+
+.results .combo_Box
+{
+    display: none;
+}
+
+
+.results .combo_wynik
+{
+    display: none;
+}
+
+
+.results .combo_lupa
+{
+    display: none;
+}
+
+
+.results .combo_pogrub
+{
+    display: none;
+}
+
+
+.results .nic
+{
+    display: none;
+}
