@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px 70px 50px 1fr;
-    font-family: arial,sans-serif;
+    font-family: Arial,sans-serif;
     
 }
 
@@ -182,23 +182,6 @@
     fill: #5f6368;
 }
 
-.results input
-{
-    font-family: arial,sans-serif;
-    background-color: transparent;
-    border: none;
-    padding-bottom: 10px;
-    color: #222;
-    word-wrap: break-word;
-    outline: none;
-    display: flex;
-    flex: 100%;
-    height: 30px;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: start;
-}
-
 .results .wyszukiwanie:hover,
 .results .wyszukiwanie:focus {
     box-shadow: 0 0 0.3em 0.1em #d9d9d9;
@@ -216,7 +199,7 @@
     color: #fff;
     background: #1a73e8;
     border: 1px solid transparent;
-    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-family: Google Sans,Roboto,RobotoDraft, Helvetica,Arial,sans-serif;
     font-weight: 500;
     font-size: 14px;
     padding: 9px 23px;
@@ -233,16 +216,18 @@
     padding-right: 20px;
 }
 
-.results .liczba_wynikow
+.results .liczba_wynikow 
 {
     padding-left: 180px;
     padding-top: 10px;
     grid-column: 1;
     grid-row: 3;
     color: #70757a;
-    font-family: arial,sans-serif;
+    font-family: Arial,sans-serif;
     font-size: 14px;
 }
+
+
 .results .lista
 {
     display: flex;
@@ -273,6 +258,7 @@
     line-height: 1.3;
     color: #202124;
     text-decoration: none;
+    font-family: Arial,sans-serif;
 }
 
 
@@ -280,11 +266,13 @@
 .results .tytul
 {
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.9;
     color: #1a0dab;
     padding: 4px 0 4px 0;
     width: fit-content;
     text-decoration: none;
+    padding: 2px;
+    font-family: Arial,sans-serif;
 }
 
 .results .opis
@@ -293,6 +281,9 @@
     color: #4d5156;
     text-align: left;
     font-size: 14px;
+    font-family: Arial,sans-serif;
+    padding: 4px 0 4px 0;
+
 }
 
 .results .dol
@@ -373,4 +364,23 @@
 .results .nic
 {
     display: none;
+}
+
+.results input
+{
+    font-family: arial,sans-serif;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    color: #222;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: start;
 }
