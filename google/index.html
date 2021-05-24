@@ -30,8 +30,8 @@
 
                 <div class="wyszukiwarka">
                     <div class="wyszukiwanie">
-                            <img class="lupa" src="loop.png">
-                            <input v-model="googleSearch" type="szukaj" maxlength="2048" title="Szukaj" v-on:click="set()">
+                            <img class="lupa" src="loop2.png">
+                            <input v-model="googleSearch" type="szukaj" maxlength="2048" title="Szukaj" v-on:click="set()" @keyup.up="next(activeResult - 1)" @keyup.down="next(activeResult + 1)" @keyup.enter="change(googleSearch)">
                             <img class="klawiatura" src="qwerty.png" title="klawiatura">
                             <span class="kreska"></span>
                             <svg class="x" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
@@ -39,9 +39,9 @@
                             <div class="top10">
                                 <div id="autocomp" :class="[ googleSearch.length != 0 && filteredCities.length != 0 && kontrol == 1 ? 'autocompleter' : 'nic']">
                                     <ul class="combo_Box">
-                                        <li class="combo_wynik" v-for="city in filteredCities" v-on:click="change(city.name)">
-                                            <img class="combo_lupa" src="loop.png">
-                                            <div class="combo_pogrub" v-html="boldd(city.name)">
+                                        <li class="combo_wynik" v-for="(city, index) in filteredCities" @click="change(city.name)" :class="{active : autocompIsActive && activeResult === index}">
+                                            <img class="combo_lupa" src="loop2.png">
+                                            <div class="combo_pogrub" v-html="city.nameHtml">
                                             </div>  
                                         </li>
                                     </ul>
@@ -154,19 +154,43 @@
                   el: '#app',
                   data: {
                     googleSearch: '',
-                    cities: window.cities,
                     isActive: 0,
-                    kontrol: 0
+                    kontrol: 0,
+                    autocompIsActive: false,
+                    activeResult: 0,
+                    filteredCities: [],
+                    cities: window.cities.map((cityData) => {
+                        cityData.nameLowerCase = cityData.name.toLowerCase();
+                        return cityData;
+                    })
                   },
-                  computed: {
-                    filteredCities: function()
+                  watch: 
                     {
-                        let c = this.cities.filter(city => city.name.includes(this.googleSearch))
-                            if(c.length > 10){
-                                c=c.slice(0,11);
-                            }
-                            return c
+                    googleSearch() {
+                        if (this.autocompIsActive) {
+                            return;
                         }
+                        if (this.googleSearch.length === 0) {
+                            filteredCities = [];
+                            return;
+                        }
+                        let returnedCities = [];
+                        let searchLowerCase = this.googleSearch.toLowerCase();
+
+                        this.cities.forEach((cityData) => {
+                            if (returnedCities.length === 10 || !cityData.nameLowerCase.includes(searchLowerCase)) {
+                                return;
+                            }
+                            returnedCities.push({
+                                name: cityData.name,
+                                nameHtml: cityData.nameLowerCase.replace(searchLowerCase, (match) => {
+                                    return '<span class="bold">' + match + '</span>';
+                                })
+                            })
+                        });
+                        
+                        this.filteredCities = returnedCities;
+                    }
                     },
                     methods:
                     { 
@@ -185,17 +209,25 @@
                             this.kontrol = 0;
                             }
                         },
-                        boldd: function(x)
+                    
+                        next: function(index)
                         {
-                            slowo = this.googleSearch;
-                            var pom = x.split(slowo);
-                            for(i = 0; i < pom.length; i++)
-                            {
-                            x = x.replace(pom[i], pom[i].bold());
+                            if (!this.autocompIsActive) {
+                            index = 0;
+                            } 
+
+                            if (index > this.filteredCities.length - 1) {
+                                index = 0;
+                            } else if (index < 0) {
+                                index = this.filteredCities.length - 1;
                             }
-                            return x;
+                            
+                            this.autocompIsActive = true;
+                            this.activeResult = index;
+                            this.googleSearch = this.filteredCities[index].name;
                         }
                     }
+                    
                 });
             </script>  
         </div>
