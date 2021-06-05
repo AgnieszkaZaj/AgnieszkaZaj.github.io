@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
@@ -8,9 +9,11 @@
         <script src="cities.js"></script>
         <script src="functions.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="autocompleter.css">
+        <script src="autocompleter.js"></script>
     </head>
     <body>
-        <div id="app" :class="[ googleSearch.length != 0 && isActive == 1 ? 'results' : isActive = 0 ]"> 
+        <div id="app" :class="[ googleSearch.length != 0 && is_Active == 1 ? 'results' : is_Active = 0 ]"> 
             <div class="gora">
                 <div class="gora_prawo">
                     <div class="gora_elementy">
@@ -31,22 +34,10 @@
                 <div class="wyszukiwarka">
                     <div class="wyszukiwanie">
                             <img class="lupa" src="loop2.png">
-                            <input v-model="googleSearch" type="szukaj" maxlength="2048" title="Szukaj" v-on:click="set()" @keyup.up="next(activeResult - 1)" @keyup.down="next(activeResult + 1)" @keyup.enter="change(googleSearch)">
+                            <v-autocompleter :value="googleSearch" @input="googleSearch = $event" @enter="enter"></v-autocompleter>
                             <img class="klawiatura" src="qwerty.png" title="klawiatura">
                             <span class="kreska"></span>
                             <svg class="x" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-                            
-                            <div class="top10">
-                                <div id="autocomp" :class="[ googleSearch.length != 0 && filteredCities.length != 0 && kontrol == 1 ? 'autocompleter' : 'nic']">
-                                    <ul class="combo_Box">
-                                        <li class="combo_wynik" v-for="(city, index) in filteredCities" @click="change(city.name)" :class="{active : autocompIsActive && activeResult === index}">
-                                            <img class="combo_lupa" src="loop2.png">
-                                            <div class="combo_pogrub" v-html="city.nameHtml">
-                                            </div>  
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                     </div>
                     <div class="przyciski">
                             <button class="przycisk1" type="button" onclick="location.href='https://netflix.com'">Szukaj w Google</button>
@@ -149,88 +140,24 @@
                     <a class="opis">Otóż inaczej będą prezentować się wyniki wyszukiwania po wpisaniu tej samej frazy przez ... Google przechwytuje adres IP i za jego pomocą generuje wyniki, np. po wpisaniu frazy ... Jaki jest koszt pozycjonowania sklepu?</a><br><br><br>
                 </div>  
             </div>
-            <script>
-                var app = new Vue({
-                  el: '#app',
-                  data: {
-                    googleSearch: '',
-                    isActive: 0,
-                    kontrol: 0,
-                    autocompIsActive: false,
-                    activeResult: 0,
-                    filteredCities: [],
-                    cities: window.cities.map((cityData) => {
-                        cityData.nameLowerCase = cityData.name.toLowerCase();
-                        return cityData;
-                    })
-                  },
-                  watch: 
-                    {
-                    googleSearch() {
-                        if (this.autocompIsActive) {
-                            return;
-                        }
-                        if (this.googleSearch.length === 0) {
-                            filteredCities = [];
-                            return;
-                        }
-                        let returnedCities = [];
-                        let searchLowerCase = this.googleSearch.toLowerCase();
-
-                        this.cities.forEach((cityData) => {
-                            if (returnedCities.length === 10 || !cityData.nameLowerCase.includes(searchLowerCase)) {
-                                return;
-                            }
-                            returnedCities.push({
-                                name: cityData.name,
-                                nameHtml: cityData.nameLowerCase.replace(searchLowerCase, (match) => {
-                                    return '<span class="bold">' + match + '</span>';
-                                })
-                            })
-                        });
-                        
-                        this.filteredCities = returnedCities;
-                    }
-                    },
-                    methods:
-                    { 
-                        set: function()
-                        {
-                            this.kontrol = 1;
-                        },
-                        change: function(x)
-                        {
-                            if(this.isActive == 0)
-                            {
-                            this.isActive = 1;
-                            this.googleSearch = x;
-                            y = document.getElementById("autocomp");
-                            y.blur();
-                            this.kontrol = 0;
-                            }
-                        },
-                    
-                        next: function(index)
-                        {
-                            if (!this.autocompIsActive) {
-                            index = 0;
-                            } 
-
-                            if (index > this.filteredCities.length - 1) {
-                                index = 0;
-                            } else if (index < 0) {
-                                index = this.filteredCities.length - 1;
-                            }
-                            
-                            this.autocompIsActive = true;
-                            this.activeResult = index;
-                            this.googleSearch = this.filteredCities[index].name;
-                        }
-                    }
-                    
-                });
-            </script>  
         </div>
+        <script type="text/javascript">
+            var app = new Vue({
+              el: "#app",
+              data: {
+                googleSearch: "",
+                cities: window.cities,
+                is_Active: 0
+              },
+              methods: {
+                enter(active, search) {
+                  console.log("results");
+                  this.is_Active = active;
+                  this.googleSearch = search;
+                }
+              }
+            });
+          </script>  
     </body>
-</html>
 
+</html>
