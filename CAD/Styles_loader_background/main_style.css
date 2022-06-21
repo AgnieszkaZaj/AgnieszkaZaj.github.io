@@ -8,6 +8,56 @@ body {
   font-size: medium;
   color: #fafffe;
 }
+button{
+  right: 5px;
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 60px;
+  width: 500px;
+  height: 100px;
+  color: black;
+  justify-content: center;
+  display: block;
+
+    grid-template-rows: 50% 50%;
+    position: relative;
+    margin: 10px auto;
+}
+iframe{
+  display: block;
+  justify-content: center;
+  grid-template-rows: 50% 50%;
+  position: relative;
+  margin: 10px auto;
+}
+o{
+  position: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  width: 500px;
+  height: 100px;
+  justify-content: center;
+  grid-template-rows: 70% 30%;
+    margin: 10px auto;
+}
+}
+form
+{
+  display: block;
+  justify-content: center;
+  grid-template-rows: 50% 50%;
+  position: relative;
+  margin: 10px auto;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 60px;
+}
+input
+{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  width: 500px;
+  height: 100px;
+}
 .container-main {
   width: 70%;
   margin-left: 10%;
