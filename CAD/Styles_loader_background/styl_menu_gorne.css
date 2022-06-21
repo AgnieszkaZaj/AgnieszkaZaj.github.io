@@ -1,0 +1,121 @@
+header{
+    position: sticky;
+    top: 0;
+    background-color: #181818;
+    color: var(--white);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5%;      
+    padding-bottom: 1.5%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    z-index: 99 !important;
+}
+.nav-top{
+    display: grid;
+    grid-template-columns: repeat(4, 15%);    
+    grid-column-gap: 15px;  
+    justify-content: end;
+}
+#button1, #button2, #button3, #button4{
+    background-color: var(--white);
+    border-radius: 40px;
+    display: grid;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 30%;
+    padding-right: 30%;
+    text-decoration: none;
+    color: #535050;
+    font-weight: bold;
+    overflow:hidden;
+    font-size: 1em;
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover{
+    color:#FFFAFA;
+    background-color:var(--purple);
+}
+.logo{
+    display: flex;
+    position: relative;
+    animation-name: animation-show;
+    animation-duration: 4s;
+}
+#web-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 0.4em;
+}
+#web-title:hover{
+    animation-name: animation-spin;
+    animation-duration: 2s;
+}
+#image-logo{
+    display: none;
+}
+#icon1, #icon2, #icon3, #icon4{
+    display: none;
+}
+@media screen and (max-width: 850px ){
+    #image-logo {
+        display: inline;
+        width: 55px;
+        height: 30px;
+    }
+    .logo{
+        position: relative;
+        animation-name: animation-show;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+    }
+    #image-logo:hover{
+        animation-name: animation-spin;
+        animation-duration: 2s;
+    }
+    #web-title{
+        display: none;
+    }
+}
+@media screen and (max-width: 625px ){
+    #span1, #span2, #span3, #span4{
+        display: none;
+    }
+    #icon1, #icon2, #icon3, #icon4{
+        display: inline;
+    }
+}
+@keyframes animation-show{
+    from{
+        left: 150px;
+        opacity: 0;
+    }
+    to{
+        left: 0px;
+        opacity: 1;
+    }
+}
+@keyframes animation-spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+:root {
+    --white: #fffafa;
+    --purple: #4b0082;
+  }
+
+
+
+
+
+
+
+
+
+
+
