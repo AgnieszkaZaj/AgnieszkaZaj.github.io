@@ -1,0 +1,16 @@
+#landing-page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: -80px;
+    padding-top: 80px;
+    margin-bottom: 70px;
+    z-index: 98;
+  }
+  #landing-page > img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    float: left;
+  }
